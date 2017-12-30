@@ -10,12 +10,12 @@
 {% block content %}
   <h2>
 	{% if user.is_authenticated %}  
-	  Welcome back, {{ user.username }}! Continue your journal,	
+	  Welcome back, {{ user.username }}! Continue your learning journal	
+	  <a href="{% url 'learning_logs:topics' %}">here</a>.
     {% else %}
       <a href="{% url 'users:register' %}">Register an account</a> to make
-      your own Learning Log,
+      your own Learning Log, and list the topics you're learning about.
     {% endif %} 
-    write about the topics you're learning, and track your progress.
   </h2>
   <h2>
     Whenever you learn something new about a topic, make an entry 
